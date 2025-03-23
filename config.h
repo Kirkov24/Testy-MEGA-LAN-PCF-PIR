@@ -14,7 +14,7 @@ const unsigned long BUTTON_DOUBLE_CLICK_INTERVAL = 350;
 const unsigned long BUTTON_LONG_PRESS_INTERVAL = 800;
 
 #ifdef USE_EXPANDER
-  const uint8_t gExpanderAddresses[] = {0x3D, 0x39, 0x3A, 0x26, 0x3C, 0x38, 0X21, 0X24, 0X20}; //0x27 nie jest używany obecnie ale jest podłączony więc musi być zdeklarowany
+  const uint8_t gExpanderAddresses[] = {0x3D, 0x39, 0x3A, 0x26, 0x3C, 0x38, 0X20, 0X21, 0X22}; //dodanie 0x23 psuje wszystko, oczywiście trzeba go fizycznie podłączyć i od komentować sekcję "przycisków"
   //const uint8_t gExpanderAddresses[] = {0X20, 0x21, 0x22, 0X23, 0X24, 0x25,0x27}; //0x27 nie jest używany obecnie
 #endif
 
