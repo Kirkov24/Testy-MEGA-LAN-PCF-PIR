@@ -88,23 +88,23 @@ const RelayConfigDef gRelayConfig[] PROGMEM = {
 {48, E(5,7), RELAY_TRIGGER_LOW, -1,"Oś. Schodów Kinkiet"}, //K17
 
 //wirtualne przekaźniki dla PIR i detekcji w HA. Nazwy pokazywane są w HA
-{100, 1, RELAY_TRIGGER_HIGH, -1,"PIR Wiatrołap Garaż"},
-{101, 2, RELAY_TRIGGER_HIGH, -1,"PIR Wiatrołap Wejście"},
-{102, 3, RELAY_TRIGGER_HIGH, -1,"PIR Spiżarnia"},
-{103, 4, RELAY_TRIGGER_HIGH, -1,"PIR Kuchnia"},
-{104, 5, RELAY_TRIGGER_HIGH, -1,"PIR Garaż Brama"},
-{105, 6, RELAY_TRIGGER_HIGH, -1,"PIR Łazienka dół"},
-{106, 7, RELAY_TRIGGER_HIGH, -1,"PIR Zewnętrzna nad tarasem"},
-{107, 8, RELAY_TRIGGER_HIGH, -1,"PIR Wejście do kotłowni"},
+{100, -1, RELAY_TRIGGER_HIGH, -1,"PIR Wiatrołap Garaż"},
+{101, -1, RELAY_TRIGGER_HIGH, -1,"PIR Wiatrołap Wejście"},
+{102, -1, RELAY_TRIGGER_HIGH, -1,"PIR Spiżarnia"},
+{103, -1, RELAY_TRIGGER_HIGH, -1,"PIR Kuchnia"},
+{104, -1, RELAY_TRIGGER_HIGH, -1,"PIR Garaż Brama"},
+{105, -1, RELAY_TRIGGER_HIGH, -1,"PIR Łazienka dół"},
+{106, -1, RELAY_TRIGGER_HIGH, -1,"PIR Zewnętrzna nad tarasem"},
+{107, -1, RELAY_TRIGGER_HIGH, -1,"PIR Wejście do kotłowni"},
 
-{108, 9, RELAY_TRIGGER_HIGH, -1,"PIR Kotłownia"},
-{109, 10, RELAY_TRIGGER_HIGH, -1,"PIR Garderoba"},
-{110, 11, RELAY_TRIGGER_HIGH, -1,"PIR Piętro nad schodami"},
-{111, 12, RELAY_TRIGGER_HIGH, -1,"PIR Wejście na schody"},
-{112, 13, RELAY_TRIGGER_HIGH, -1,"PIR Pokój zabaw"},
-{113, 14, RELAY_TRIGGER_HIGH, -1,"PIR Pokój Mateusza"},
-{114, 15, RELAY_TRIGGER_HIGH, -1,"PIR Sypialnia bliźniaków"},
-{115, 16, RELAY_TRIGGER_HIGH, -1,"PIR8"},
+{108, -1, RELAY_TRIGGER_HIGH, -1,"PIR Kotłownia"},
+{109, -1, RELAY_TRIGGER_HIGH, -1,"PIR Garderoba"},
+{110, -1, RELAY_TRIGGER_HIGH, -1,"PIR Piętro nad schodami"},
+{111, -1, RELAY_TRIGGER_HIGH, -1,"PIR Wejście na schody"},
+{112, -1, RELAY_TRIGGER_HIGH, -1,"PIR Pokój zabaw"},
+{113, -1, RELAY_TRIGGER_HIGH, -1,"PIR Pokój Mateusza"},
+{114, -1, RELAY_TRIGGER_HIGH, -1,"PIR Sypialnia bliźniaków"},
+{115, -1, RELAY_TRIGGER_HIGH, -1,"PIR8"},
 
 };
 
