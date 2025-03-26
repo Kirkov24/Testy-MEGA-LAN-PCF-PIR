@@ -14,8 +14,8 @@ const unsigned long BUTTON_DOUBLE_CLICK_INTERVAL = 350;
 const unsigned long BUTTON_LONG_PRESS_INTERVAL = 800;
 
 #ifdef USE_EXPANDER
-  const uint8_t gExpanderAddresses[] = {0x3D, 0x39, 0x3A, 0x26, 0x3C, 0x38, 0X20, 0X21, 0X22}; //dodanie 0x23 psuje wszystko, oczywiście trzeba go fizycznie podłączyć i od komentować sekcję "przycisków"
-  //const uint8_t gExpanderAddresses[] = {0X20, 0x21, 0x22, 0X23, 0X24, 0x25,0x27}; //0x27 nie jest używany obecnie
+  const uint8_t gExpanderAddresses[] = {0x3D, 0x39, 0x3A, 0x26, 0x3C, 0x38, 0X20, 0x21, 0x22, 0X23, 0X24, 0x25}; //0x27 nie jest używany obecnie ale jest podłączony więc musi być zdeklarowany
+  //const uint8_t gExpanderAddresses[] = {0X20, 0x21, 0x22, 0X23, 0X24, 0x25,0x26,0x27}; //0x27 nie jest używany obecnie
 #endif
 
 const char MULTI_RELAY_DESCRIPTION[] PROGMEM = "Multi Relay";
@@ -97,14 +97,14 @@ const RelayConfigDef gRelayConfig[] PROGMEM = {
 {106, -1, RELAY_TRIGGER_HIGH, -1,"PIR Zewnętrzna nad tarasem"},
 {107, -1, RELAY_TRIGGER_HIGH, -1,"PIR Wejście do kotłowni"},
 
-{108, -1, RELAY_TRIGGER_HIGH, -1,"PIR Kotłownia"},
-{109, -1, RELAY_TRIGGER_HIGH, -1,"PIR Garderoba"},
-{110, -1, RELAY_TRIGGER_HIGH, -1,"PIR Piętro nad schodami"},
-{111, -1, RELAY_TRIGGER_HIGH, -1,"PIR Wejście na schody"},
-{112, -1, RELAY_TRIGGER_HIGH, -1,"PIR Pokój zabaw"},
-{113, -1, RELAY_TRIGGER_HIGH, -1,"PIR Pokój Mateusza"},
-{114, -1, RELAY_TRIGGER_HIGH, -1,"PIR Sypialnia bliźniaków"},
-{115, -1, RELAY_TRIGGER_HIGH, -1,"PIR8"},
+/*{108, 9, RELAY_TRIGGER_HIGH, -1,"PIR Kotłownia"},
+{109, 10, RELAY_TRIGGER_HIGH, -1,"PIR Garderoba"},
+{110, 11, RELAY_TRIGGER_HIGH, -1,"PIR Piętro nad schodami"},
+{111, 12, RELAY_TRIGGER_HIGH, -1,"PIR Wejście na schody"},
+{112, 13, RELAY_TRIGGER_HIGH, -1,"PIR Pokój zabaw"},
+{113, 14, RELAY_TRIGGER_HIGH, -1,"PIR Pokój Mateusza"},
+{114, 15, RELAY_TRIGGER_HIGH, -1,"PIR Sypialnia bliźniaków"},
+{115, 16, RELAY_TRIGGER_HIGH, -1,"PIR8"},*/
 
 };
 
@@ -163,7 +163,7 @@ const ButtonConfigDef gButtonConfig[] PROGMEM = {
 {14, BI_STABLE,  40, -1, -1, "Oś. Wiatrołapu garaż"}, //K20 - przycisk koło łazienki na 
 */
 
-// 0X20 PRZYCISKI WŁĄCZAJĄCE ŚWIATŁA NAZWY NIE SĄ PRZENOSZONE DO HA TO TYLKO OPIS DLA JASNOŚCI SYTUACJI - PODOBNIE KOMENTARZE
+/* 0X20 PRZYCISKI WŁĄCZAJĄCE ŚWIATŁA NAZWY NIE SĄ PRZENOSZONE DO HA TO TYLKO OPIS DLA JASNOŚCI SYTUACJI - PODOBNIE KOMENTARZE
 {E(6,0), BI_STABLE,  39, -1, -1, "WIATROŁAP WEJŚCIE"}, //W1 - ŚCIANA WIATROŁAPU ZAPLA ŚWIATŁO NAD WEJŚCIEM GŁÓWNYM
 //{E(6,0), BI_STABLE,  40, -1, -1, "WIATROŁAP WEJŚCIE"}, //W1 - ŚCIANA WIATROŁAPU ZAPLA ŚWIATŁO NAD WEJŚCIEM DO GARAŻU
 {E(6,1), BI_STABLE,  1, -1, -1, "WYJŚCIE NA TARAS"}, //W2 - ZAPALA ŚWIATŁO ZEWNĘTRZNE NA TARASIE KINKIETY K1K2 
@@ -184,7 +184,7 @@ const ButtonConfigDef gButtonConfig[] PROGMEM = {
 {E(7,6), REED_SWITCH,  106, -1, -1, "PIR Zewnętrzna nad tarasem"}, //C12 - wysyła sygnał do wirtualnego przekaźnika 106
 {E(7,7), REED_SWITCH,  107, -1, -1, "PIR Wejście do Kotłowni"}, //C13 - wysyła sygnał do wirtualnego przekaźnika 105 */
 
-//0X22 PRZYCISKI WYŁĄCZAJĄCE ŚWIATŁA
+/*0X22 PRZYCISKI WYŁĄCZAJĄCE ŚWIATŁA
 {E(8,0), BI_STABLE,  17, -1, -1, "GABINET"}, //W6 - ŚCIANA GABINETU
 {E(8,1), BI_STABLE,  9, -1, -1, "KORYTARZ"}, //W7 - KORYTARZ NA PRZECIWKO ŁAZIENKI
 {E(8,2), BI_STABLE,  19, -1, -1, "SYPIALNIA BLIŹNIAKÓW"}, //W12 - ŚCIANA SYPIALNI BLIŹNIAKÓW
@@ -235,13 +235,11 @@ const ButtonConfigDef gButtonConfig[] PROGMEM = {
 
 // Enable MY_IP_ADDRESS here if you want a static ip address (no DHCP)
 #define MY_IP_ADDRESS 192,168,1,224
-//#define MY_MAC_ADDRESS 0xDE, 0xAA, 0xBE, 0xEF, 0xFE, 0xED
+#define MY_MAC_ADDRESS 0xDE, 0xAA, 0xBE, 0xEF, 0xFE, 0xED
 // If using static ip you can define Gateway and Subnet address as well
 #define MY_IP_GATEWAY_ADDRESS 192,168,1,1
 #define MY_IP_SUBNET_ADDRESS 255,255,255,0
 
-
-//#define MY_MAC_ADDRESS 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED
 #define MY_PORT 5003
 #define MY_USE_tcp
 //#define MY_USE_UDP
